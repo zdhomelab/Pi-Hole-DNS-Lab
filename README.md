@@ -60,7 +60,7 @@ flowchart LR
 5. **Active Directory integration:** added Pi-hole as the DNS forwarder on the domain controller, and enabled conditional forwarding in Pi-hole for `zeroday.local`.
 6. **Validation:** tested the full chain from the client with `nslookup`, then confirmed the results in the query log and dashboard.
 
-Full step-by-step write-up with screenshots: [`docs/PiHole_DNS_Security_Lab.pdf`](docs/PiHole_DNS_Security_Lab.pdf)
+
 
 ## Configuration Notes
 
