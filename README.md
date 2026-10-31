@@ -1,3 +1,5 @@
+![zdb](screenshots/zdb.png)
+
 # Pi-hole DNS Filtering & Visibility Lab
 
 **Enterprise-style DNS filtering, logging, and visibility in an Active Directory homelab.**
