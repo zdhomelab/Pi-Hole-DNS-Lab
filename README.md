@@ -8,7 +8,7 @@
 ![Active Directory](https://img.shields.io/badge/Active-Directory-0078D4?style=flat-square)
 ![Debian 12](https://img.shields.io/badge/Debian-12%20LXC-A81D33?style=flat-square)
 
-![Project infographic](screenshorts/infographic.png)
+![Project infographic](screenshots/Infographic.png)
 
 ## Summary
 
