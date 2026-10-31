@@ -123,9 +123,9 @@ Tests were run from WC01. The key test names no DNS server, so the query follows
 
 The query log also shows the domain controller's normal background lookups (time sync and Microsoft services) being allowed, so Pi-hole filters selectively and does not block everything.
 
-![Query chain from WC01](Pi-Hole-DNS-Lab/screenshots/17-nslookup-chain.png)
-![Pi-hole query log](Pi-Hole-DNS-Lab/screenshots/19-query-log.png)
-![Pi-hole dashboard](Pi-Hole-DNS-Lab/screenshots/20-dashboard.png)
+![Query chain from WC01](screenshots/17-nslookup-chain.png)
+![Pi-hole query log](screenshots/19-query-log.png)
+![Pi-hole dashboard](screenshots/20-dashboard.png)
 
 ## Screenshots
 
