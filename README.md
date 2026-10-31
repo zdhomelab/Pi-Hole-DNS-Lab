@@ -47,7 +47,7 @@ flowchart LR
 | SRV-DC01 | Windows Server 2025 VM | Active Directory, DNS, forwards to Pi-hole |
 | WC01 | Windows 11 Pro VM | Domain-joined client, uses SRV-DC01 for DNS |
 
-![DNS flow diagram](Pi-Hole-DNS-Lab/screenshots/01-dns-flow.png)
+![DNS flow diagram](screenshots/01-dns-flow.png)
 
 ## Implementation Overview
 
