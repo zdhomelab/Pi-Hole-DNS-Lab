@@ -47,7 +47,7 @@ flowchart LR
 | SRV-DC01 | Windows Server 2025 VM | Active Directory, DNS, forwards to Pi-hole |
 | WC01 | Windows 11 Pro VM | Domain-joined client, uses SRV-DC01 for DNS |
 
-![DNS flow diagram](screenshots/01-dns-flow.png)
+![DNS flow diagram](Pi-Hole-DNS-Lab/screenshots/01-dns-flow.png)
 
 ## Implementation Overview
 
@@ -123,9 +123,9 @@ Tests were run from WC01. The key test names no DNS server, so the query follows
 
 The query log also shows the domain controller's normal background lookups (time sync and Microsoft services) being allowed, so Pi-hole filters selectively and does not block everything.
 
-![Query chain from WC01](screenshots/17-nslookup-chain.png)
-![Pi-hole query log](screenshots/19-query-log.png)
-![Pi-hole dashboard](screenshots/20-dashboard.png)
+![Query chain from WC01](Pi-Hole-DNS-Lab/screenshots/17-nslookup-chain.png)
+![Pi-hole query log](Pi-Hole-DNS-Lab/screenshots/19-query-log.png)
+![Pi-hole dashboard](Pi-Hole-DNS-Lab/screenshots/20-dashboard.png)
 
 ## Screenshots
 
@@ -134,25 +134,25 @@ The query log also shows the domain controller's normal background lookups (time
 
 | # | Screenshot | What it shows |
 | --- | --- | --- |
-| 02 | [Container summary](screenshots/02-ct-summary.png) | Running, unprivileged, low resource use |
-| 03 | [Container resources](screenshots/03-ct-resources.png) | 1 core, 1 GiB RAM, 512 MiB swap, 2 GB disk |
-| 04 | [Container options](screenshots/04-ct-options.png) | Start at boot, unprivileged |
-| 05 | [hostnamectl](screenshots/05-hostnamectl.png) | Debian 12, LXC |
-| 06 | [ip a](screenshots/06-ip-a.png) | Static address on eth0 |
-| 07 | [SSH test](screenshots/07-ssh-test.png) | Root login denied, admin logs in with key |
-| 08 | [SSH settings](screenshots/08-ssh-settings.png) | Active SSH hardening settings |
-| 09 | [Container network](screenshots/09-ct-network.png) | Static IPv4 configuration |
-| 10 | [Firewall rules](screenshots/10-firewall-rules.png) | HTTPS, HTTP, DNS, SSH from the lab subnet |
-| 11 | [Firewall options](screenshots/11-firewall-options.png) | Firewall enabled, input policy DROP |
-| 12 | [Blocklists](screenshots/12-blocklists.png) | Four lists enabled |
-| 13 | [Gravity update](screenshots/13-gravity-update.png) | 2,878,806 unique domains |
-| 14 | [DC forwarder](screenshots/14-dc-forwarder.png) | Domain controller forwards to Pi-hole |
-| 15 | [Conditional forwarding](screenshots/15-conditional-forwarding.png) | `zeroday.local` sent to the domain controller |
-| 16 | [WC01 ipconfig](screenshots/16-wc01-ipconfig.png) | Client DNS is the domain controller |
-| 17 | [nslookup chain](screenshots/17-nslookup-chain.png) | Blocked through the DC, returns `0.0.0.0` |
-| 18 | [nslookup direct](screenshots/18-nslookup-direct.png) | Normal, blocked, and internal lookups |
-| 19 | [Query log](screenshots/19-query-log.png) | Blocked lookups with client SRV-DC01 |
-| 20 | [Dashboard](screenshots/20-dashboard.png) | 24-hour query and block statistics |
+| 02 | [Container summary](Pi-Hole-DNS-Lab/screenshots/02-ct-summary.png) | Running, unprivileged, low resource use |
+| 03 | [Container resources](Pi-Hole-DNS-Lab/screenshots/03-ct-resources.png) | 1 core, 1 GiB RAM, 512 MiB swap, 2 GB disk |
+| 04 | [Container options](Pi-Hole-DNS-Lab/screenshots/04-ct-options.png) | Start at boot, unprivileged |
+| 05 | [hostnamectl](Pi-Hole-DNS-Lab/screenshots/05-hostnamectl.png) | Debian 12, LXC |
+| 06 | [ip a](Pi-Hole-DNS-Lab/screenshots/06-ip-a.png) | Static address on eth0 |
+| 07 | [SSH test](Pi-Hole-DNS-Lab/screenshots/07-ssh-test.png) | Root login denied, admin logs in with key |
+| 08 | [SSH settings](Pi-Hole-DNS-Lab/screenshots/08-ssh-settings.png) | Active SSH hardening settings |
+| 09 | [Container network](Pi-Hole-DNS-Lab/screenshots/09-ct-network.png) | Static IPv4 configuration |
+| 10 | [Firewall rules](Pi-Hole-DNS-Lab/screenshots/10-firewall-rules.png) | HTTPS, HTTP, DNS, SSH from the lab subnet |
+| 11 | [Firewall options](Pi-Hole-DNS-Lab/screenshots/11-firewall-options.png) | Firewall enabled, input policy DROP |
+| 12 | [Blocklists](Pi-Hole-DNS-Lab/screenshots/12-blocklists.png) | Four lists enabled |
+| 13 | [Gravity update](Pi-Hole-DNS-Lab/screenshots/13-gravity-update.png) | 2,878,806 unique domains |
+| 14 | [DC forwarder](Pi-Hole-DNS-Lab/screenshots/14-dc-forwarder.png) | Domain controller forwards to Pi-hole |
+| 15 | [Conditional forwarding](Pi-Hole-DNS-Lab/screenshots/15-conditional-forwarding.png) | `zeroday.local` sent to the domain controller |
+| 16 | [WC01 ipconfig](Pi-Hole-DNS-Lab/screenshots/16-wc01-ipconfig.png) | Client DNS is the domain controller |
+| 17 | [nslookup chain](Pi-Hole-DNS-Lab/screenshots/17-nslookup-chain.png) | Blocked through the DC, returns `0.0.0.0` |
+| 18 | [nslookup direct](Pi-Hole-DNS-Lab/screenshots/18-nslookup-direct.png) | Normal, blocked, and internal lookups |
+| 19 | [Query log](Pi-Hole-DNS-Lab/screenshots/19-query-log.png) | Blocked lookups with client SRV-DC01 |
+| 20 | [Dashboard](Pi-Hole-DNS-Lab/screenshots/20-dashboard.png) | 24-hour query and block statistics |
 
 </details>
 
